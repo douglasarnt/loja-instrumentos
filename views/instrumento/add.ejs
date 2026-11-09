@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar Instrumento</title>
+</head>
+<body>
+  <h1>Cadastro de Instrumento</h1>
+
+  <form action="/instrumento/add" method="POST">
+    <p>
+      <label for="nome">Nome:</label><br>
+      <input type="text" id="nome" name="nome" required>
+    </p>
+    <p>
+      <label for="fabricante">Fabricante:</label><br>
+      <input type="text" id="fabricante" name="fabricante" required>
+    </p>
+    <p>
+      <label for="preco">Preço:</label><br>
+      <input type="number" id="preco" name="preco" step="0.01" min="0" required>
+    </p>
+    <p>
+      <label for="tipo">Tipo:</label><br>
+      <input type="text" id="tipo" name="tipo" required>
+    </p>
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <p><a href="/instrumento/lst">Voltar à listagem</a></p>
+</body>
+</html>

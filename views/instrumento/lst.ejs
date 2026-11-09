@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Instrumentos</title>
+</head>
+<body>
+  <h1>Instrumentos Cadastrados</h1>
+
+  <p><a href="/instrumento/add">Cadastrar novo instrumento</a></p>
+
+  <table border="1" cellpadding="6">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Fabricante</th>
+        <th>Preço</th>
+        <th>Tipo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if (instrumentos.length === 0) { %>
+        <tr><td colspan="4">Nenhum instrumento cadastrado.</td></tr>
+      <% } %>
+      <% instrumentos.forEach(function(i) { %>
+        <tr>
+          <td><%= i.nome %></td>
+          <td><%= i.fabricante %></td>
+          <td>R$ <%= i.preco.toFixed(2) %></td>
+          <td><%= i.tipo %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</body>
+</html>

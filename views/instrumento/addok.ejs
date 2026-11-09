@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro realizado</title>
+</head>
+<body>
+  <h1>Instrumento cadastrado com sucesso!</h1>
+
+  <ul>
+    <li><strong>Nome:</strong> <%= instrumento.nome %></li>
+    <li><strong>Fabricante:</strong> <%= instrumento.fabricante %></li>
+    <li><strong>Preço:</strong> R$ <%= instrumento.preco.toFixed(2) %></li>
+    <li><strong>Tipo:</strong> <%= instrumento.tipo %></li>
+  </ul>
+
+  <p>
+    <a href="/instrumento/add">Cadastrar outro instrumento</a> |
+    <a href="/instrumento/lst">Voltar à listagem</a>
+  </p>
+</body>
+</html>
